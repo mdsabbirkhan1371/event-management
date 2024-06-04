@@ -3,36 +3,36 @@
     "id": "1",
     "name": "John Smith",
     "title": "CEO, Tech Innovations Inc.",
-    "img": "../public/assets/speaker/speaker-1.png"
+    "img": "/assets/speaker/speaker-1.png"
   },
   {
     "id": "2",
     "name": "Alice Johnson",
     "title": "Chief Marketing Officer, AI and Robotics Co.",
-    "img": "../public/assets/speaker/speaker-2.png"
+    "img": "/public/assets/speaker/speaker-2.png"
   },
   {
     "id": "3",
     "name": "Michael Brown",
     "title": "Head of Cybersecurity, SecureNet Solutions",
-    "img": "../public/assets/speaker/speaker-3.png"
+    "img": "/public/assets/speaker/speaker-3.png"
   },
   {
     "id": "4",
     "name": "Emma Davis",
     "title": "Director of Cloud Services, CloudTech",
-    "img": "../public/assets/speaker/speaker-4.png"
+    "img": "/public/assets/speaker/speaker-4.png"
   },
   {
     "id": "5",
     "name": "James Wilson",
     "title": "Healthcare Innovations Lead, MediTech Corp.",
-    "img": "../public/assets/speaker/speaker-5.png"
+    "img": "/assets/speaker/speaker-5.png"
   },
   {
     "id": "6",
     "name": "Olivia Martinez",
     "title": "Senior Data Scientist, BioPharma Inc.",
-    "img": "../public/assets/speaker/speaker-6.png"
+    "img": "/assets/speaker/speaker-5.png"
   }
 ]
