@@ -101,7 +101,7 @@ const Navbar = () => {
             Logout
           </button>
         ) : (
-          <button className="btn btn-outline px-10 btn-secondary font-extrabold">
+          <button className="btn btn-outline px-10   btn-secondary font-extrabold">
             <Link to="/login">Login</Link>
           </button>
         )}
