@@ -1,43 +1,43 @@
-import { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { AuthContext } from '../../providers/AuthProvider';
-import { ToastContainer, toast } from 'react-toastify';
-import { sendEmailVerification } from 'firebase/auth';
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import { sendEmailVerification } from "firebase/auth";
 
 const Register = () => {
   const { createUser, setSuccess, success, error, setError } =
     useContext(AuthContext);
 
-  const handleRegister = e => {
+  const handleRegister = (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
     console.log(data);
-    const email = data.get('email');
-    const name = data.get('name');
-    const password = data.get('password');
-    const photo = data.get('photo');
+    const email = data.get("email");
+    const name = data.get("name");
+    const password = data.get("password");
+    const photo = data.get("photo");
 
     console.log(name, email, password, photo);
 
     // clean error and success data from ui
 
-    setError('');
-    setSuccess('');
+    setError("");
+    setSuccess("");
 
     // create user with email and password
     createUser(email, password)
-      .then(res => {
+      .then((res) => {
         console.log(res.user);
         const user = res.user;
         if (res.user === res.user) {
-          setSuccess('Created Account Successfully');
-          toast('Created Account Successfully');
+          setSuccess("Created Account Successfully");
+          toast("Created Account Successfully");
         }
 
         // send email verification to user
         sendEmailVerification(user);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
         setError(error.message);
         toast(error.message);
@@ -45,7 +45,7 @@ const Register = () => {
   };
 
   const style = {
-    backgroundColor: 'indigo',
+    backgroundColor: "indigo",
   };
 
   return (
@@ -59,7 +59,7 @@ const Register = () => {
         </h3>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Name</span>
+            <span className="label-text text-white">Name</span>
           </label>
           <input
             type="text"
@@ -71,7 +71,7 @@ const Register = () => {
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Photo URL</span>
+            <span className="label-text text-white">Photo URL</span>
           </label>
           <input
             type="text"
@@ -83,7 +83,7 @@ const Register = () => {
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text text-white">Email</span>
           </label>
           <input
             type="email"
@@ -95,7 +95,7 @@ const Register = () => {
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text text-white">Password</span>
           </label>
           <input
             type="password"
@@ -106,7 +106,7 @@ const Register = () => {
           />
           <label className="label">
             <h3>
-              Already Have An Account?{' '}
+              Already Have An Account?{" "}
               <Link className="text-success font-bold" to="/login">
                 Login Here
               </Link>

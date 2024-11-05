@@ -1,6 +1,6 @@
-import Events from '../Events/Events';
-import Banner from '../Home/Banner';
-import Speaker from '../Speaker/Speaker';
+import Events from "../Events/Events";
+import Banner from "../Home/Banner";
+import Speaker from "../Speaker/Speaker";
 
 const Header = () => {
   return (
